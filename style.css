@@ -37,11 +37,11 @@ body {
     height: 80px;
   }
   
-  /* Hero Section (from index.html) */
+  /* Hero Section (index.html) */
   .hero-section {
     height: 100vh;
     min-height: 500px;
-    background-image: url('./img/trcukk.jpg'); /* Replace with your image path */
+    background-image: url('./img/trcukk.jpg'); /* Desktop image */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -77,19 +77,45 @@ body {
     padding: 0.75rem 1.5rem;
   }
   
+  /* Mobile Hero Overrides */
   @media (max-width: 576px) {
+    .hero-section {
+      height: 100vh;
+      background-image: url('./img/mobile.jpg'); /* Mobile-specific image */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center top;
+      background-color: whitesmoke;
+      position: relative; /* Needed for absolute positioning of text overlay */
+      display: block; /* Override flex to allow absolute positioning */
+      padding-top: 0; /* reset any padding that might push content */
+    }
+
+    .text-overlay {
+      position: absolute;
+      top: 15%;           /* Adjust vertical position on mobile */
+      left: 50%;
+      transform: translateX(-50%);
+      max-width: 90vw;
+      max-height: 90vh;
+      padding: 1rem 2rem;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+      color: white;
+      text-align: center;
+    }
+  
     .hero-title {
       font-size: 1.75rem;
     }
+  
     .hero-subtitle {
       font-size: 1rem;
     }
+  
     .hero-button {
       font-size: 1rem;
       padding: 0.5rem 1rem;
-    }
-    .hero-section {
-      height: 80vh;
     }
   }
   
@@ -267,4 +293,3 @@ body {
     padding-top: 3rem !important;
     padding-bottom: 3rem !important;
   }
-  
