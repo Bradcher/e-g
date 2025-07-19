@@ -3,142 +3,156 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Professional mobile car detailing services in Goodyear, AZ. Book now for premium exterior and interior cleaning at your location." />
-
-  <title>Car Detailing in Goodyear, AZ | E&G Auto Mobile Detailing</title>
-
-  <!-- Bootstrap CSS CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-
-  <!-- Font Awesome CDN for Instagram icon -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <title>Ceramic Coating Benefits | E&G Auto Mobile Detailing</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Match service-card style for benefit cards */
+    .benefit-card {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 0.375rem; /* 6px */
+      box-shadow: none;
+      color: #333;
+      min-height: 150px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .benefit-card h5 {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .benefit-card p {
+      margin-bottom: 0;
+      font-size: 1rem;
+      line-height: 1.4;
+      color: #555;
+    }
+    .hero-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+}
+
+.hero-gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7));
+  z-index: 1;
+}
+
+.hero-section .container {
+  z-index: 2;
+  position: relative;
+}
+
+.text-shadow {
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+  </style>
 </head>
 <body>
-  <!-- Navbar -->
+
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg shadow-sm fixed-top bg-white">
     <div class="container">
-  
-      <!-- Logo -->
       <a class="navbar-brand" href="./index.html">
-        <img src="./img/eglogo.png" alt="E&G Logo" height="80">
+        <img src="./img/eglogo.png" alt="E&G Logo" height="80" />
       </a>
-  
-      <!-- Toggler for mobile -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLinks">
         <span class="navbar-toggler-icon"></span>
       </button>
-  
-      <!-- Nav links (Book Now included) -->
       <div class="collapse navbar-collapse justify-content-end" id="navLinks">
         <ul class="navbar-nav align-items-lg-center">
-  
-          <!-- Sol PHX Residents Link -->
           <li class="nav-item">
             <a href="https://visibook.com/e622joatazndgzpxu" target="_blank" class="nav-link fs-5 fw-bold text-dark">
               Sol Modern
             </a>
           </li>
-  
-          <!-- Book Now -->
           <li class="nav-item">
             <a href="https://visibook.com/eandgautomobiledetailing" class="nav-link fs-5 text-dark">Book Now</a>
           </li>
-  
-          <!-- Services -->
           <li class="nav-item">
             <a href="services.html" class="nav-link fs-5 text-dark">Services</a>
           </li>
-  
-          <!-- Gallery -->
           <li class="nav-item">
             <a href="gallery.html" class="nav-link fs-5 text-dark">Gallery</a>
           </li>
-          
         </ul>
       </div>
-  
     </div>
   </nav>
-  
 
-  <!-- Main Content -->
-<main>
-  <section class="container">
-    <h2>Our Services</h2>
-    <div class="services-grid">
-
-      <!-- Premium Services at the Top -->
-      <div class="service-card">
-        <h3>Ceramic Coating</h3>
-        <p>Long-lasting protection that enhances shine and repels dirt, water, and contaminants.</p>
-        <a href="./ceramic.html" class="price" style="color: #6c757d; text-decoration: underline;">Learn more</a>
-      </div>
-
-      <div class="service-card">
-        <h3>Window Tint</h3>
-        <p>Professional window tinting for UV protection, privacy, and a sleek look.</p>
-        <a href="./tint.html" class="price" style="color: #6c757d; text-decoration: underline;">Learn more</a>
-      </div>
-
-      <div class="service-card">
-        <h3>Paint Protection Film (PPF)</h3>
-        <p>Clear, durable film that protects your paint from chips, scratches, and road debris.</p>
-        <a href="./ppf.html" class="price" style="color: #6c757d; text-decoration: underline;">Learn more</a>
-      </div>
-
-      <!-- Existing Services -->
-      <div class="service-card">
-        <h3>Exterior Wash &amp; Wax</h3>
-        <p>Complete hand wash and premium wax application to protect your paint.</p>
-        <p class="price">$80</p>
-      </div>
-
-      <div class="service-card">
-        <h3>Interior Deep Cleaning</h3>
-        <p>Vacuuming, shampooing carpets and upholstery, and dashboard detailing.</p>
-        <p class="price">$120</p>
-      </div>
-
-      <div class="service-card">
-        <h3>Full Detail Package</h3>
-        <p>Combines interior deep cleaning and exterior wash &amp; wax for total shine.</p>
-        <p class="price">$180</p>
-      </div>
-
-      <div class="service-card">
-        <h3>Paint Correction</h3>
-        <p>Removes swirl marks, scratches, and restores paint clarity.</p>
-        <p class="price">$250</p>
-      </div>
-
-      <div class="service-card">
-        <h3>Engine Bay Cleaning</h3>
-        <p>Safe cleaning of your engine compartment for a spotless finish.</p>
-        <p class="price">$70</p>
-      </div>
-
-      <div class="service-card">
-        <h3>Headlight Restoration</h3>
-        <p>Improves clarity and brightness of foggy or yellowed headlights.</p>
-        <p class="price">$60</p>
-      </div>
-
+  <!-- Hero Section with Gradient -->
+<section class="hero-section position-relative text-center text-white" style="height: 350px;">
+    <div class="hero-bg" style="background: url('./img/ceramic.jpg') center/cover no-repeat;"></div>
+    <div class="hero-gradient-overlay"></div>
+    <div class="container position-relative z-2" style="padding-top: 120px;">
+      <h1 class="display-4 fw-bold text-shadow">Ceramic Coating Benefits</h1>
+      <p class="lead text-shadow">Protect your vehicle with a premium, long-lasting shield.</p>
     </div>
   </section>
-</main>
+  
 
+  <!-- Benefits Cards -->
+  <main class="container py-5">
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="benefit-card">
+          <h5>Long-lasting Protection</h5>
+          <p>Guards your paint from UV rays, oxidation, and chemical stains.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="benefit-card">
+          <h5>Hydrophobic Effect</h5>
+          <p>Water and dirt bead off easily, keeping your car cleaner for longer.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="benefit-card">
+          <h5>Enhanced Gloss &amp; Shine</h5>
+          <p>Makes your vehicle’s paint look deeper and more vibrant.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="benefit-card">
+          <h5>Scratch Resistance</h5>
+          <p>Provides a hard layer to reduce minor swirl marks and scratches.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="benefit-card">
+          <h5>Easier Maintenance</h5>
+          <p>Makes washing your car quicker and less frequent.</p>
+        </div>
+      </div>
+    </div>
 
+    <div class="text-center mt-5">
+        <a href="/services.html" class="btn btn-light text-dark me-3 px-4 py-2 fw-semibold" style="border: 1px solid #000;">Back to Services</a>
+        <a href="tel:+16232276383" class="btn btn-dark text-white px-4 py-2 fw-semibold" aria-label="Call for Quote">Call for Quote</a>
+      </div>
+      
+  </main>
 
-
-
-  <!-- Footer -->
+  <!-- Footer: exactly your original -->
   <footer class="footer text-white py-5 mt-5">
     <div class="container">
       <div class="row align-items-center text-center text-md-start">
-  
-        <!-- Left Side -->
         <div class="col-md-6 mb-4 mb-md-0 d-flex flex-column align-items-center align-items-md-start">
           <h4 class="mb-2"></h4>
           <img src="./img/eglogo.png" alt="Montero Detailing Logo" style="max-width: 150px;" class="mb-3" />
@@ -149,8 +163,6 @@
             📞 (623) 227-6383
           </a>
         </div>
-  
-        <!-- Right Side -->
         <div class="col-md-6">
           <h5 class="">Business Hours</h5>
           <ul class="list-unstyled small mb-0">
@@ -163,24 +175,18 @@
             <li><strong>Sun</strong>: Closed</li>
           </ul>
         </div>
-  
       </div>
-  
-      <!-- Disclaimer Summary -->
       <div class="text-dark text-center mt-4 small">
         <p class="mb-1">
           All services must be paid in advance. No refunds. 5-year warranty on PPF. Sol Modern is not liable for any damage that may occur during service.
         </p>
         <a href="/terms.html" class="text-dark text-decoration-underline">View Full Terms & Conditions</a>
       </div>
-  
-      <!-- Rights Reserved Line -->
       <hr class="border-secondary my-4" />
       <p class="copy text-center small mb-0">&copy; 2025 E&G Auto Mobile Detailing. All rights reserved.</p>
     </div>
   </footer>
 
-  <!-- Bootstrap JS Bundle (includes Popper) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
