@@ -1,295 +1,297 @@
 /* Global Styles */
 body {
-    background-color: whitesmoke;
-    color: #000;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    padding-top: 110px; /* offset fixed navbar height */
-    margin: 0;
-  }
-  
-  .navbar {
-    background-color: white;
-  }
-  
-  h2 {
-    font-weight: 700;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
-    text-align: center;
-  }
-  
-  h5, li, .copy {
-    color: black;
-  }
-  
-  .btn-primary {
-    background-color: black;
-    border: none;
-    transition: background-color 0.3s ease;
-  }
-  
-  .btn-primary:hover {
-    background-color: #333;
-  }
-  
-  /* Navbar brand image height */
-  .navbar-brand img {
-    height: 80px;
-  }
-  
-  /* Hero Section (index.html) */
+  background-color: whitesmoke;
+  color: #000;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-top: 110px;
+  margin: 0;
+}
+
+.navbar {
+  background-color: white;
+}
+
+h2 {
+  font-weight: 700;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+h5, li, .copy {
+  color: black;
+}
+
+.btn-primary {
+  background-color: black;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #333;
+}
+
+.navbar-brand img {
+  height: 80px;
+}
+
+/* Hero Section - shared layout (no image here!) */
+.hero-section {
+  height: 100vh;
+  min-height: 500px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Homepage-specific hero image */
+.home-hero {
+  background: url('./img/trcukk.jpg') center/cover no-repeat;
+}
+
+/* Text overlay box inside hero */
+.text-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  max-width: 700px;
+  padding: 1rem 2rem;
+  color: white;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  margin-top: 0.5rem;
+}
+
+.hero-button {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+  padding: 0.75rem 1.5rem;
+}
+
+/* Mobile Hero Overrides */
+@media (max-width: 576px) {
   .hero-section {
     height: 100vh;
-    min-height: 500px;
-    background-image: url('./img/trcukk.jpg'); /* Desktop image */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    /* 🚫 Removed background-image here too */
+    background-color: whitesmoke;
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    display: block;
+    padding-top: 0;
   }
-  
+
+  .home-hero {
+    background: url('./img/mobile.jpg') center top / cover no-repeat;
+  }
+
   .text-overlay {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 90vw;
+    max-height: 90vh;
+    padding: 1rem 2rem;
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 10px;
-    max-width: 90vw;
-    max-width: 700px;
-    padding: 1rem 2rem;
     color: white;
-  }
-  
-  .hero-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-  }
-  
-  .hero-subtitle {
-    font-size: 1.25rem;
-    margin-top: 0.5rem;
-  }
-  
-  .hero-button {
-    margin-top: 1rem;
-    font-size: 1.25rem;
-    padding: 0.75rem 1.5rem;
-  }
-  
-  /* Mobile Hero Overrides */
-  @media (max-width: 576px) {
-    .hero-section {
-      height: 100vh;
-      background-image: url('./img/mobile.jpg'); /* Mobile-specific image */
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center top;
-      background-color: whitesmoke;
-      position: relative; /* Needed for absolute positioning of text overlay */
-      display: block; /* Override flex to allow absolute positioning */
-      padding-top: 0; /* reset any padding that might push content */
-    }
-
-    .text-overlay {
-      position: absolute;
-      top: 15%;           /* Adjust vertical position on mobile */
-      left: 50%;
-      transform: translateX(-50%);
-      max-width: 90vw;
-      max-height: 90vh;
-      padding: 1rem 2rem;
-      background-color: rgba(0, 0, 0, 0.5);
-      border-radius: 10px;
-      color: white;
-      text-align: center;
-    }
-  
-    .hero-title {
-      font-size: 1.75rem;
-    }
-  
-    .hero-subtitle {
-      font-size: 1rem;
-    }
-  
-    .hero-button {
-      font-size: 1rem;
-      padding: 0.5rem 1rem;
-    }
-  }
-  
-  /* Review Stars */
-  .review-stars {
-    color: #fbc02d;
-    font-size: 1.5rem;
-  }
-  
-  /* Contact Section */
-  .contact-section {
-    background-color: #fff;
-    padding: 2rem 0;
-  }
-  
-  /* Footer */
-  footer.footer {
-    background-color: white;
-    color: black;
-    padding: 1rem 0 2rem 0;
     text-align: center;
   }
-  
-  footer.footer .instagram-btn {
-    background-color: transparent;
-    border: 1px solid black;
-    color: black;
-    transition: all 0.3s ease;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    padding: 0.25rem 0.75rem;
+
+  .hero-title {
+    font-size: 1.75rem;
   }
-  
-  footer.footer .instagram-btn:hover {
-    background-color: black;
-    color: white;
-    border-color: white;
-  }
-  
-  footer.footer img {
-    max-width: 150px;
-    margin-bottom: 1rem;
-  }
-  
-  /* Gallery Styles (gallery.html) */
-  .gallery-grid {
-    max-width: 1200px;
-    margin: 0 auto 3rem;
-    padding: 0 1rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-  }
-  
-  .gallery-item {
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgb(0 0 0 / 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-    background-color: #f9f9f9;
-  }
-  
-  .gallery-item:hover {
-    transform: scale(1.03);
-    box-shadow: 0 10px 20px rgb(0 0 0 / 0.12);
-  }
-  
-  .gallery-item img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    display: block;
-    border-radius: 12px;
-  }
-  
-  /* Services Styles (services.html) */
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-    padding: 0 1rem;
-    max-width: 1200px;
-    margin: 0 auto 3rem;
-  }
-  
-  .service-card {
-    border: 1px solid #ddd;
-    border-radius: 12px;
-    padding: 1.75rem 1.5rem;
-    box-shadow: 0 4px 6px rgb(0 0 0 / 0.05);
-    transition: box-shadow 0.3s ease;
-    background: #fff;
-  }
-  
-  .service-card:hover {
-    box-shadow: 0 8px 16px rgb(0 0 0 / 0.1);
-  }
-  
-  .service-card h3 {
-    font-weight: 600;
-    margin-bottom: 0.75rem;
-    font-size: 1.25rem;
-  }
-  
-  .service-card p {
-    margin-bottom: 0.5rem;
-    color: #555;
+
+  .hero-subtitle {
     font-size: 1rem;
-    line-height: 1.4;
   }
-  
-  .price {
-    font-weight: 700;
-    color: #0d6efd;
-    font-size: 1.1rem;
-    margin-top: 0.75rem;
+
+  .hero-button {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
   }
-  
-  /* Adjust body background for services page */
-  body.services-page {
-    background-color: #fff;
-    color: #111;
-  }
-  
-  /* Map iframe container (index.html) */
-  .mt-5.px-3.px-md-5 iframe {
-    border: 0;
-    width: 100%;
-    height: 300px;
-  }
-  
-  /* Image styles */
-  .img-fluid {
-    max-width: 100%;
-    height: auto;
-    border-radius: 0.25rem;
-    box-shadow: 0 0 8px rgb(0 0 0 / 0.1);
-  }
-  
-  /* Paragraphs on index intro section */
-  .lead {
-    font-size: 1.25rem;
-    line-height: 1.8;
-    margin-bottom: 1rem;
-  }
-  
-  /* Utility for padding in container */
-  .container {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-  
-  /* Fix the small duplicate max-width on .text-overlay */
-  .text-overlay {
-    max-width: 700px;
-  }
-  
-  /* Fix Footer Text Color */
-  footer.footer p.copy {
-    color: black;
-  }
-  
-  /* Fix smaller text in footer phone link */
-  footer.footer a.text-black {
-    color: black;
-    text-decoration: none;
-    font-size: small;
-    margin-top: 0.5rem;
-  }
-  
-  /* Additional spacing for sections */
-  section.py-5 {
-    padding-top: 3rem !important;
-    padding-bottom: 3rem !important;
-  }
+}
+
+/* Review Stars */
+.review-stars {
+  color: #fbc02d;
+  font-size: 1.5rem;
+}
+
+/* Contact Section */
+.contact-section {
+  background-color: #fff;
+  padding: 2rem 0;
+}
+
+/* Footer */
+footer.footer {
+  background-color: white;
+  color: black;
+  padding: 1rem 0 2rem 0;
+  text-align: center;
+}
+
+footer.footer .instagram-btn {
+  background-color: transparent;
+  border: 1px solid black;
+  color: black;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+}
+
+footer.footer .instagram-btn:hover {
+  background-color: black;
+  color: white;
+  border-color: white;
+}
+
+footer.footer img {
+  max-width: 150px;
+  margin-bottom: 1rem;
+}
+
+/* Gallery Styles (gallery.html) */
+.gallery-grid {
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.gallery-item {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  background-color: #f9f9f9;
+}
+
+.gallery-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 20px rgb(0 0 0 / 0.12);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+}
+
+/* Services Styles (services.html) */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 0 1rem;
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+}
+
+.service-card {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 1.75rem 1.5rem;
+  box-shadow: 0 4px 6px rgb(0 0 0 / 0.05);
+  transition: box-shadow 0.3s ease;
+  background: #fff;
+}
+
+.service-card:hover {
+  box-shadow: 0 8px 16px rgb(0 0 0 / 0.1);
+}
+
+.service-card h3 {
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+}
+
+.service-card p {
+  margin-bottom: 0.5rem;
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.price {
+  font-weight: 700;
+  color: #0d6efd;
+  font-size: 1.1rem;
+  margin-top: 0.75rem;
+}
+
+/* Adjust body background for services page */
+body.services-page {
+  background-color: #fff;
+  color: #111;
+}
+
+/* Map iframe container (index.html) */
+.mt-5.px-3.px-md-5 iframe {
+  border: 0;
+  width: 100%;
+  height: 300px;
+}
+
+/* Image styles */
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 8px rgb(0 0 0 / 0.1);
+}
+
+/* Paragraphs on index intro section */
+.lead {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+/* Utility for padding in container */
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Fix the small duplicate max-width on .text-overlay */
+.text-overlay {
+  max-width: 700px;
+}
+
+/* Fix Footer Text Color */
+footer.footer p.copy {
+  color: black;
+}
+
+/* Fix smaller text in footer phone link */
+footer.footer a.text-black {
+  color: black;
+  text-decoration: none;
+  font-size: small;
+  margin-top: 0.5rem;
+}
+
+/* Additional spacing for sections */
+section.py-5 {
+  padding-top: 3rem !important;
+  padding-bottom: 3rem !important;
+}
+
