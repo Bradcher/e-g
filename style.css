@@ -49,7 +49,7 @@ h5, li, .copy {
 
 /* Homepage-specific hero image */
 .home-hero {
-  background: url('./img/trcukk.jpg') center/cover no-repeat;
+  background: url('./img/solll.jpg') center/cover no-repeat;
 }
 
 /* Text overlay box inside hero */
@@ -89,7 +89,7 @@ h5, li, .copy {
   }
 
   .home-hero {
-    background: url('./img/mobile.jpg') center top / cover no-repeat;
+    background: url('./img/solmodern.jpg') center top / cover no-repeat;
   }
 
   .text-overlay {
